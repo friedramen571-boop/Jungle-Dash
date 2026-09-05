@@ -1,1 +1,2 @@
-https://github.com/friedramen571-boop/Jungle-Dash
+
+https://friedramen571-boop.github.io/Jungle-Dash/
