@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jungle Dash | Canopy Run</title>
+  <link rel="stylesheet" href="jungle-dash.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="game-header" aria-label="Jungle Dash header">
+      <div class="brand-lockup">
+        <span class="brand-mark">✦</span>
+        <div>
+          <p class="eyebrow">Canopy Run · Level 01</p>
+          <h1>Jungle Dash</h1>
+        </div>
+      </div>
+      <div class="status-strip" aria-label="Game status">
+        <div class="stat"><span class="stat-label">Score</span><strong id="score">000000</strong></div>
+        <div class="stat"><span class="stat-label">Time</span><strong id="timer">90</strong></div>
+        <div class="stat"><span class="stat-label">Lives</span><strong id="lives">♥♥♥</strong></div>
+      </div>
+    </section>
+
+    <section class="game-stage" aria-label="Jungle Dash game">
+      <canvas id="gameCanvas" width="1280" height="640" aria-label="Playable Jungle Dash platform game"></canvas>
+      <div class="stage-vignette" aria-hidden="true"></div>
+      <div class="stage-hint"><span class="key-chip">A</span><span class="key-chip">D</span> move <span class="key-chip">SPACE</span> jump</div>
+
+      <div id="startOverlay" class="overlay overlay-visible">
+        <div class="overlay-card intro-card">
+          <span class="card-kicker">The canopy is calling</span>
+          <h2>Run wild.<br><em>Bring home the treasure.</em></h2>
+          <p>Leap across the ruins, scoop up the jungle's lost gold, and reach the sun gate before the vines close in.</p>
+          <button id="startButton" class="primary-button">Play Canopy Run <span>→</span></button>
+          <div class="control-row"><span><b>A / D</b> Run</span><span><b>SPACE</b> Jump</span></div>
+        </div>
+      </div>
+
+      <div id="resultOverlay" class="overlay" aria-live="polite">
+        <div class="overlay-card result-card">
+          <span id="resultKicker" class="card-kicker">Run complete</span>
+          <h2 id="resultTitle">You found the sun gate.</h2>
+          <p id="resultMessage">The jungle remembers a fast runner.</p>
+          <div class="result-score"><span>Final score</span><strong id="finalScore">000000</strong></div>
+          <button id="restartButton" class="primary-button">Run it again <span>↻</span></button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="game-footer">
+      <div><span class="legend-dot coin-dot"></span> Gold +100 <span class="legend-dot gem-dot"></span> Gem +250 <span class="legend-dot danger-dot"></span> Avoid the thorns</div>
+      <button id="muteButton" class="icon-button" type="button" aria-label="Toggle sound">♪ <span>Sound on</span></button>
+    </footer>
+  </main>
+  <script src="jungle-dash.js"></script>
+</body>
+</html>
